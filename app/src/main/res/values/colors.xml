@@ -1,12 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="primary">#3F51B5</color>
-    <color name="primary_dark">#303F9F</color>
-    <color name="accent">#FF4081</color>
+    <!-- Holo Light / Legacy TouchWiz colors -->
+    <color name="primary">#33B5E5</color>
+    <color name="primary_dark">#0099CC</color>
+    <color name="accent">#33B5E5</color>
+
+    <color name="background">#EEEEEE</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
-    <color name="background">#F5F5F5</color>
-    <color name="text_primary">#333333</color>
-    <color name="text_secondary">#999999</color>
-    <color name="divider">#E0E0E0</color>
+
+    <color name="text_primary">#222222</color>
+    <color name="text_secondary">#666666</color>
+    <color name="divider">#CCCCCC</color>
+
+    <!-- Classic Folder Color -->
+    <color name="folder_yellow">#FFBB33</color>
 </resources>

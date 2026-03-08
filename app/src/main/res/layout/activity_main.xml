@@ -5,80 +5,94 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F5F5F5">
+    android:background="@color/background">
 
-    <!-- Top Bar -->
+    <!-- Top Bar - Holo Blue style -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:background="#3F51B5"
+        android:background="@color/primary"
         android:gravity="center_vertical"
         android:paddingLeft="8dp"
         android:paddingRight="8dp">
 
         <ImageView
             android:id="@+id/btnBack"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             app:srcCompat="@drawable/ic_back"
-            android:padding="6dp"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:contentDescription="Back" />
 
         <ImageView
             android:id="@+id/btnUp"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             app:srcCompat="@drawable/ic_up"
-            android:padding="6dp"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:contentDescription="Up" />
 
         <ImageView
             android:id="@+id/btnHome"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             app:srcCompat="@drawable/ic_home"
-            android:padding="6dp"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:contentDescription="Home" />
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="File Manager"
-            android:textColor="#FFFFFF"
-            android:textSize="17sp"
+            android:text="OldXPlorer"
+            android:textColor="@color/white"
+            android:textSize="18sp"
             android:textStyle="bold"
-            android:gravity="center"
+            android:paddingLeft="8dp"
             android:singleLine="true" />
 
         <ImageView
             android:id="@+id/btnMore"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             app:srcCompat="@drawable/ic_more"
-            android:padding="6dp"
+            android:padding="8dp"
+            android:background="?android:attr/selectableItemBackground"
             android:contentDescription="More" />
     </LinearLayout>
 
-    <!-- Current Path -->
-    <TextView
-        android:id="@+id/tvCurrentPath"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
-        android:textSize="11sp"
-        android:background="#E8E8E8"
-        android:singleLine="true"
-        android:ellipsize="start"
-        android:textColor="#555555" />
-
-    <!-- Action Buttons -->
+    <!-- Path Bar - Legacy styled -->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
+        android:background="#DCDCDC"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvCurrentPath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:ellipsize="start"
+            android:textColor="#444444" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider" />
+    </LinearLayout>
+
+    <!-- Action Strip -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
         android:orientation="horizontal"
-        android:padding="2dp"
-        android:background="#EEEEEE">
+        android:background="#F0F0F0">
 
         <ImageView
             android:id="@+id/btnNewFolder"
@@ -86,7 +100,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_new_folder"
-            android:padding="8dp"
+            android:padding="10dp"
+            android:background="?android:attr/selectableItemBackground"
             android:contentDescription="New folder" />
 
         <ImageView
@@ -95,7 +110,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_search"
-            android:padding="8dp"
+            android:padding="10dp"
+            android:background="?android:attr/selectableItemBackground"
             android:contentDescription="Search" />
 
         <ImageView
@@ -104,7 +120,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_sort"
-            android:padding="8dp"
+            android:padding="10dp"
+            android:background="?android:attr/selectableItemBackground"
             android:contentDescription="Sort" />
 
         <ImageView
@@ -113,7 +130,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_sd_card"
-            android:padding="8dp"
+            android:padding="10dp"
+            android:background="?android:attr/selectableItemBackground"
             android:contentDescription="Storage" />
 
         <ImageView
@@ -122,18 +140,24 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_paste"
-            android:padding="8dp"
+            android:padding="10dp"
+            android:background="?android:attr/selectableItemBackground"
             android:visibility="gone"
             android:contentDescription="Paste" />
     </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider" />
 
     <!-- Clipboard info -->
     <TextView
         android:id="@+id/tvClipboard"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="6dp"
-        android:textSize="11sp"
+        android:padding="8dp"
+        android:textSize="12sp"
         android:background="#FFF9C4"
         android:textColor="#F57F17"
         android:visibility="gone"
@@ -144,7 +168,7 @@
         android:id="@+id/progressBar"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
-        android:layout_height="3dp"
+        android:layout_height="4dp"
         android:indeterminate="true"
         android:visibility="gone" />
 
@@ -153,25 +177,32 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_weight="1"
+        android:scrollbars="vertical" />
 
     <!-- Empty State -->
     <TextView
         android:id="@+id/tvEmpty"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Empty folder"
+        android:text="No files found"
         android:gravity="center"
         android:visibility="gone"
-        android:padding="48dp"
+        android:padding="64dp"
         android:textSize="16sp"
-        android:textColor="#AAAAAA" />
+        android:textColor="@color/text_secondary" />
 
-    <!-- Bottom Bar -->
+    <!-- Status Bar -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider" />
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="8dp"
+        android:layout_height="32dp"
+        android:paddingLeft="12dp"
+        android:paddingRight="12dp"
         android:background="#E0E0E0"
         android:gravity="center_vertical">
 
@@ -180,7 +211,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="12sp"
-            android:textColor="#666666"
+            android:textColor="@color/text_secondary"
             android:text="0 items" />
     </LinearLayout>
 
